@@ -55,7 +55,7 @@ public class LivrariaController { // Classe responsável por criar endpoints e m
             return ResponseEntity.ok().body(updated);
         }).orElse(ResponseEntity.notFound().build());
     }
-    
+    						
     // Deleta um objeto livro
     @DeleteMapping(path = {"/{id}"})
     public ResponseEntity<?> delete(@PathVariable("id") long id) {
@@ -64,4 +64,5 @@ public class LivrariaController { // Classe responsável por criar endpoints e m
             return ResponseEntity.ok().build();
         }).orElse(ResponseEntity.notFound().build());
     }
+    
 }
