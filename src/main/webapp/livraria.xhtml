@@ -41,7 +41,7 @@
                          paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}
                          {RowsPerPageDropdown} {Exporters}"
                          selection="#{livroMB.livro}"
-                         rowsPerPageTemplate="10,15,25,50,100">
+                         rowsPerPageTemplate="5,15,25,50,100">
                 <f:facet name="{Exporters}">
                     <h:commandLink id="exportExcel">
                         <p:graphicImage name="/images/excel.png" width="24"/>
@@ -96,6 +96,7 @@
                         <f:setPropertyActionListener value="#{item}" target="#{livroMB.livro}"/>
                     </p:commandButton>
                 </p:column>
+                
             </p:dataTable>
             <p:dialog header="Detalhes do Livro" widgetVar="itemDialog" modal="true" showEffect="fade" hideEffect="fade"
                       resizable="false">
@@ -119,7 +120,7 @@
 				
 						<h:outputText value="Digital ou Físico"/>
                         <h:outputText value="#{livroMB.livro.digitalOuFisico}"/>
-		
+						
                     </p:panelGrid>
                     <p:panelGrid columns="2" columnClasses="label,value">
                         <p:button id="btnFechar" value="Fechar" icon="ui-icon-plusthick"/>

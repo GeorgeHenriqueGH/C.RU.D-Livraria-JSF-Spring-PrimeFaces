@@ -40,9 +40,5 @@ public class CrudPrimefacesApplication {
         return new ServletListenerRegistrationBean<>(new ConfigureListener());
     }
 
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
 
 }

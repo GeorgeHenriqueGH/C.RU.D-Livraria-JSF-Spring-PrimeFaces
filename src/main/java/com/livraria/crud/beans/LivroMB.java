@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
-import javax.faces.bean.ViewScoped;
-import javax.inject.Named;
+	import javax.inject.Named;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,7 +15,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Named(value = "livroMB")
-@ViewScoped
 @Getter
 @Setter
 public class LivroMB {
@@ -34,7 +32,7 @@ public class LivroMB {
 		livros = repository.findAll();
 		return livros;
 	}
-	
+		
     public Integer getTamanhoDaLista() {
         return livros.size();
     }
@@ -42,6 +40,5 @@ public class LivroMB {
     public void setTamanhoDaLista(Integer size) {
         // Método criado para ser utilizado pelo primefaces
     }
-
-	
+    
 }
